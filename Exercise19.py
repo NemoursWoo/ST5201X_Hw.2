@@ -17,44 +17,47 @@ S_n_minus_n_over_2 = S_n - n_values / 2  # S_n - n / 2
 S_n_minus_n_over_2_div_n = (S_n - n_values / 2) / n_values  # (S_n - n / 2) / n
 S_n_minus_n_over_2_div_sqrt_n = (S_n - n_values / 2) / np.sqrt(n_values)  # (S_n - n / 2) / sqrt(n)
 
-# Plotting
-plt.figure(figsize=(12, 10))
-
-# (a) Plot S_n vs n
-plt.subplot(3, 2, 1)
+# Plot (a) S_n vs n
+plt.figure()
 plt.plot(n_values, S_n)
-plt.title('S_n vs n')
-plt.xlabel('n')
-plt.ylabel('S_n')
+plt.title('$S_n vs n$')
+plt.xlabel('$n$')
+plt.ylabel('$S_n$')
+plt.savefig('Sn_vs_n.png')  # Save the figure
+plt.close()  # Close the figure to avoid overlap
 
-# (b) Plot S_n / n vs n
-plt.subplot(3, 2, 2)
+# Plot (b) S_n / n vs n
+plt.figure()
 plt.plot(n_values, S_n_div_n)
-plt.title('S_n / n vs n')
-plt.xlabel('n')
-plt.ylabel('S_n / n')
+plt.title('$S_n / n vs n$')
+plt.xlabel('$n$')
+plt.ylabel('$S_n / n$')
+plt.savefig('Sn_div_n_vs_n.png')  # Save the figure
+plt.close()
 
-# (c) Plot S_n - n / 2 vs n
-plt.subplot(3, 2, 3)
+# Plot (c) S_n - n / 2 vs n
+plt.figure()
 plt.plot(n_values, S_n_minus_n_over_2)
-plt.title('S_n - n / 2 vs n')
-plt.xlabel('n')
-plt.ylabel('S_n - n / 2')
+plt.title('$S_n - n / 2 vs n$')
+plt.xlabel('$n$')
+plt.ylabel('$S_n - n / 2$')
+plt.savefig('Sn-n_div_2_vs_n.png')  # Save the figure
+plt.close()
 
-# (d) Plot (S_n - n / 2) / n vs n
-plt.subplot(3, 2, 4)
+# Plot (d) (S_n - n / 2) / n vs n
+plt.figure()
 plt.plot(n_values, S_n_minus_n_over_2_div_n)
-plt.title('(S_n - n / 2) / n vs n')
-plt.xlabel('n')
-plt.ylabel('(S_n - n / 2) / n')
+plt.title('$(S_n - n / 2) / n vs n$')
+plt.xlabel('$n$')
+plt.ylabel('$(S_n - n / 2) / n$')
+plt.savefig('(Sn-n_div_2)_div_n_vs_n.png')  # Save the figure
+plt.close()
 
-# (e) Plot (S_n - n / 2) / sqrt(n) vs n
-plt.subplot(3, 2, 5)
+# Plot (e) (S_n - n / 2) / sqrt(n) vs n
+plt.figure()
 plt.plot(n_values, S_n_minus_n_over_2_div_sqrt_n)
-plt.title('(S_n - n / 2) / sqrt(n) vs n')
-plt.xlabel('n')
-plt.ylabel('(S_n - n / 2) / sqrt(n)')
-
-# Adjust layout
-plt.tight_layout()
-plt.show()
+plt.title('$(S_n - n / 2) / \sqrt{n} vs n$')
+plt.xlabel('$n$')
+plt.ylabel('$(S_n - n / 2) / \sqrt{n}$')
+plt.savefig('(Sn-n_div_2)_div_sqrt_n_vs_n.png')  # Save the figure
+plt.close()
